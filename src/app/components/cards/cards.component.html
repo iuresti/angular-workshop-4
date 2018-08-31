@@ -1,0 +1,10 @@
+<div class="card pointer" (click)="loadArtist(item)">
+  <img class="card-img-top" [src]="item.images | noimage" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+    <p class="card-text">
+        <span *ngFor="let singer of item.artists"
+              class="badge badge-primary">{{singer.name}}</span>
+    </p>
+  </div>
+</div>
